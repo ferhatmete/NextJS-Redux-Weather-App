@@ -5,6 +5,7 @@ import { AppThunk } from "../../../GlobalRedux/store";
 import axios from "axios";
 
 interface WeatherData {
+  list: any;
   name: string;
   main: {
     temp: number;
