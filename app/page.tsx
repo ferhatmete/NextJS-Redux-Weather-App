@@ -11,11 +11,11 @@ const Weather = () => {
   const [selectedCity, setSelectedCity] = useState("Istanbul"); // Default city
 
   useEffect(() => {
-    dispatch(fetchWeather(selectedCity));
+    dispatch<any>(fetchWeather(selectedCity));
   }, [dispatch, selectedCity]);
 
   useEffect(() => {
-    dispatch(fetchForecast(selectedCity));
+    dispatch<any>(fetchForecast(selectedCity));
   }, [dispatch, selectedCity]);
 
   const weatherData = useSelector((state: RootState) => state.weather.data);

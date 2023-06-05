@@ -1,4 +1,9 @@
-import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import {
+  configureStore,
+  ThunkAction,
+  Action,
+  AnyAction,
+} from "@reduxjs/toolkit";
 import weatherReducer from "../GlobalRedux/Features/weather/weatherSlice";
 import forecastReducer from "../GlobalRedux/Features/forecast/forecastSlice";
 
@@ -16,5 +21,5 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,
   unknown,
-  Action<string>
+  Action<string> | AnyAction
 >;
