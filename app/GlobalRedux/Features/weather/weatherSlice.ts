@@ -67,7 +67,10 @@ export const fetchWeather =
     dispatch(fetchWeatherStart());
 
     try {
-      const apiKey = "96c9a7480514c86df884329855d8dac9";
+      const apiKey =
+        process.env.NODE_ENV === "production"
+          ? process.env.NEXT_PUBLIC_API_KEY
+          : process.env.NEXT_PUBLIC_API_KEY;
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity}&appid=${apiKey}&units=metric`;
       const response = await axios.get(url);
       dispatch(fetchWeatherSuccess(response.data));

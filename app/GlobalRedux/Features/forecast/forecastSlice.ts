@@ -60,43 +60,19 @@ export const {
 
 export default ForecastSlice.reducer;
 
-// export const fetchForecast =
-//   (selectedCity: string): AppThunk =>
-//   async (dispatch) => {
-//     dispatch(fetchForecastStart());
-
-//     try {
-//       const url = `https://www.metaweather.com/api/location/search/?query=${encodeURIComponent(
-//         selectedCity
-//       )}`;
-//       const response = await axios.get(url);
-
-//       if (response.data.length > 0) {
-//         const woeid = response.data[0].woeid;
-//         const forecastUrl = `https://www.metaweather.com/api/location/${woeid}/`;
-//         const forecastResponse = await axios.get(forecastUrl);
-//         dispatch(fetchForecastSuccess(forecastResponse.data));
-//         console.log(forecastResponse.data);
-//       } else {
-//         dispatch(fetchForecastFailure("Location not found."));
-//       }
-//     } catch (error: any) {
-//       dispatch(fetchForecastFailure(error.message));
-//     }
-//   };
-
 export const fetchForecast =
   (selectedCity: string): AppThunk =>
   async (dispatch) => {
     dispatch(fetchForecastStart());
 
     try {
-      const apiKey = "96c9a7480514c86df884329855d8dac9";
+      const apiKey =
+        process.env.NODE_ENV === "production"
+          ? process.env.NEXT_PUBLIC_API_KEY
+          : process.env.NEXT_PUBLIC_API_KEY;
       const url = `https://api.openweathermap.org/data/2.5/forecast?q=${selectedCity}&appid=${apiKey}&units=metric`;
-      // const url = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${selectedCity}&cnt=5&appid=${apiKey}&units=metric`;
-
       const response = await axios.get(url);
-      dispatch(fetchForecastSuccess(response.data));
       console.log(response.data);
+      dispatch(fetchForecastSuccess(response.data));
     } catch (error) {}
   };
