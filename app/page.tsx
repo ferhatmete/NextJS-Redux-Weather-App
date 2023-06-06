@@ -2,9 +2,9 @@ import WeatherComponent from "./components/WeatherComponent/component";
 
 function page() {
   return (
-    <div>
+    <main>
       <WeatherComponent />
-    </div>
+    </main>
   );
 }
 
