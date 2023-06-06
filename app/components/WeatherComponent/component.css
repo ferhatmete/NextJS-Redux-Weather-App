@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: aquamarine;
+    padding: 10px;
+    height: 100vh;
+    gap: 10px;
+}
+
+h1{
+    padding: 20px;
+}
+
+p, span{
+    text-transform: capitalize;
+}
+
+.city-select{
+    padding: 20px;
+}
+
+.weather-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.weather, .forecast{
+    
+}
+
+.weather-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.weather-data-info{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 20px;
+    width: 150px;
+    height: 130px;
+}
+
+.weather-data-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Forecast */
+
+.forecast, .forecast-status-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.forecast-status-boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.forecast-status-data{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 20px;
+    gap: 10px;
+    width: 150px;
+    height: 130px;
+}
+
+.forecast-status-data img{
+    width: 30px;
+}
