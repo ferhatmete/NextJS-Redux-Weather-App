@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -279,13 +280,13 @@ const Weather = () => {
                               <p>{getDayName(new Date(item.dt_txt))}</p>
                             </div>
                             <div className="forecast-status-data" key={index}>
-                              <p>{item.main.temp.toFixed(1)}°C</p>
-                              <p>{item.weather[0].description}</p>
                               <img
                                 style={{ width: "50" }}
                                 src={`http://openweathermap.org/img/w/${item.weather[0].icon}.png`}
                                 alt="Weather Icon"
                               />
+                              <p>{item.main.temp.toFixed(1)}°C</p>
+                              <p>{item.weather[0].description}</p>
                             </div>
                           </div>
                         </>
