@@ -94,7 +94,7 @@ const Weather = () => {
 
   return (
     <>
-      <div className="container">
+      <div className={`container ${weatherData ? "show" : ""}`}>
         <h1>Weather App</h1>
         <div className="city-select">
           <label htmlFor="citySelect">Select City: </label>

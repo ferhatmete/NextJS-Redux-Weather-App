@@ -1,123 +1,134 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 10px;
-    height: 100vh;
-    gap: 10px;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
-    background-size: cover;
-    background-position: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  height: 100vh;
+  gap: 10px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: 0.5s;
 }
 
-h1{
-    padding: 20px;
-    color: white;
+.container.show {
+  opacity: 1;
 }
 
-p, span, h2, label{
-    text-transform: capitalize;
-    color: white;
+h1 {
+  padding: 20px;
+  color: white;
 }
 
-select{
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    height: 30px;
-    width: 150px;
-    border-radius: 10px;
+p,
+span,
+h2,
+label {
+  text-transform: capitalize;
+  color: white;
 }
 
-option{
-   color: black;
+select {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 150px;
+  border-radius: 10px;
 }
 
-label{
-    font-size: 20px;
+option {
+  color: black;
 }
 
-.city-select{
-    padding: 20px;
+label {
+  font-size: 20px;
 }
 
-.weather-status{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
+.city-select {
+  padding: 20px;
 }
 
-.weather, .forecast{
-    
+.weather-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
-.weather-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.weather,
+.forecast {
 }
 
-.weather-data{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: 0.5s;
 }
 
-.weather-data-info{
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: rgba(17, 32, 32, 0.473);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    padding: 20px;
-    width: 160px;
-    height: 150px;
+.weather-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
 }
 
-.weather-data-info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.weather-data-info {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: rgba(17, 32, 32, 0.473);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 20px;
+  width: 160px;
+  height: 150px;
+}
+
+.weather-data-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 /* Forecast */
 
-.forecast, .forecast-status-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.forecast,
+.forecast-status-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: 0.5s;
 }
 
-.forecast-status-boxes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+.forecast-status-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-
-.forecast-status-data{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    background-color: rgba(17, 32, 32, 0.473);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    padding: 20px;
-    gap: 10px;
-    width: 160px;
-    height: 150px;
+.forecast-status-data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(17, 32, 32, 0.473);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 20px;
+  gap: 10px;
+  width: 160px;
+  height: 150px;
 }
 
-.forecast-status-data img{
-    width: 50px;
+.forecast-status-data img {
+  width: 50px;
 }
